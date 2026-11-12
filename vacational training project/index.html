@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="logo for favicon.png" />
+    <link rel="stylesheet" href="index.css" />
+    <title>उत्तराखंड Tourism</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@700;800&display=swap"
+    />
+  </head>
+  <body>
+    <div id="progressBar"></div>
+    <div class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">
+          <img src="logo website.png"  alt="उत्तराखंड Tourism" class="logo" />
+          <span class="hi">उत्तराखंड </span>
+          <span class="en">Tourism</span>
+        </div>
+        <div class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="destination.html">Destinations</a>
+          <a href="travel-guide.html">Travel Guide</a>
+          <a href="About Uttarakhand.html">About</a>
+          <a href="#planner">Planner</a>
+
+          <select id="districtSelect" aria-label="Select district">
+            <option>Select District</option>
+            <option>Nainital</option>
+            <option>Dehradun</option>
+            <option>Haridwar</option>
+            <option>Pauri</option>
+            <option>Chamoli</option>
+            <option>Almora</option>
+            <option>Pithoragarh</option>
+            <option>Uttarkashi</option>
+            <option>Tehri</option>
+            <option>Rudraprayag</option>
+            <option>Bageshwar</option>
+            <option>Champawat</option>
+            <option>Udham Singh Nagar</option>
+          </select>
+          <input type="text" placeholder="Search place" />
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="wrap hero-card">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Photo-first district tourism</div>
+            <h1>Tap district. See places. Build plan.</h1>
+            <p class="lead">
+              This version is intentionally visual. The site needs big scenic
+              blocks, real photos, and clear district cards. That is what
+              creates a tourism feel.
+            </p>
+
+            <div class="hero-actions">
+              <a href="destination.html" class="explore-btn">
+                Explore Districts
+              </a>
+            </div>
+
+            <div class="search-row">
+              <div class="field">
+                <span>🔎</span
+                ><input
+                  type="text"
+                  placeholder="Search district / attraction"
+                />
+              </div>
+              <div class="field">
+                <span>🗓️</span>
+                <select id="days">
+                  <option value="1" selected>1 day</option>
+                  <option value="2">2 days</option>
+                  <option value="3">3 days</option>
+                  <option value="4">5 days</option>
+                </select>
+              </div>
+              <div class="field">
+                <span>💰</span>
+                <select id="budget">
+                  <option>Low</option>
+                  <option selected>Medium</option>
+                  <option>High</option>
+                </select>
+              </div>
+              <button id="buildTrip" class="btn btn-primary">Build Trip</button>
+            </div>
+
+            <div class="stats">
+              <div class="stat"><strong>13</strong><span>districts</span></div>
+              <div class="stat">
+                <strong>4</strong><span>tourism modes</span>
+              </div>
+              <div class="stat">
+                <strong>1</strong><span>photo-first experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-label="Uttarakhand scenic highlights">
+            <div class="art-main">
+              <img
+                src="kedarnath temple.png"
+                
+                alt="Kedarnath view"
+                class="art-img"
+              />
+              <div class="art-tag"><b id="heroDistrict">District</b></div>
+            </div>
+
+            <div class="art-side">
+              <img
+                src="deer in wildlife.png"
+                
+                alt="Uttarakhand wildlife"
+                class="art-img"
+              />
+              <div class="art-tag">Wildlife photo</div>
+            </div>
+
+            <div class="art-bottom">
+              <img
+                src="hero lake.png"
+                
+                alt="Uttarakhand lake"
+                class="art-img"
+              />
+              <div class="art-tag">Lake photo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="section" id="map">
+        <h2>Interactive district map</h2>
+        <p class="sub">You can choose district you want to explore.</p>
+
+        <div class="layout">
+          <div class="panel map-box">
+            <div class="map-placeholder">
+              <div class="map-label">Tap a district on the map</div>
+              <div class="district-grid">
+                <div class="district active" data-key="nainital">
+                  <b>Nainital</b><small>Kumaon</small>
+                </div>
+                <div class="district" data-key="dehradun">
+                  <b>Dehradun</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="haridwar">
+                  <b>Haridwar</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="pauri">
+                  <b>Pauri</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="chamoli">
+                  <b>Chamoli</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="almora">
+                  <b>Almora</b><small>Kumaon</small>
+                </div>
+                <div class="district" data-key="pithoragarh">
+                  <b>Pithoragarh</b><small>Kumaon</small>
+                </div>
+                <div class="district" data-key="uttarkashi">
+                  <b>Uttarkashi</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="tehri">
+                  <b>Tehri</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="rudraprayag">
+                  <b>Rudraprayag</b><small>Garhwal</small>
+                </div>
+                <div class="district" data-key="bageshwar">
+                  <b>Bageshwar</b><small>Kumaon</small>
+                </div>
+                <div class="district" data-key="champawat">
+                  <b>Champawat</b><small>Kumaon</small>
+                </div>
+                <div class="district" data-key="udhamsinghnagar">
+                  <b>Udham Singh Nagar</b><small>Kumaon</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-journey">
+              <h3>Your Travel Journey</h3>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-icon">📍</div>
+                  <div class="timeline-content">
+                    <h4>Select District</h4>
+                    <p>Choose from all 13 districts.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon">🏔️</div>
+                  <div class="timeline-content">
+                    <h4>Explore Attractions</h4>
+                    <p>Discover famous places and hidden gems.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon">📝</div>
+                  <div class="timeline-content">
+                    <h4>Generate Plan</h4>
+                    <p>Create a personalized itinerary.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon">🚀</div>
+                  <div class="timeline-content">
+                    <h4>Start Adventure</h4>
+                    <p>Enjoy your unforgettable journey.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="planner">
+            <div class="details-header">
+              <div>
+                <div class="badge">📍 Selected district</div>
+                <h2 id="districtName" style="margin: 12px 0 8px">Nainital</h2>
+                <p id="districtVibe" class="sub" style="margin-bottom: 0">
+                  Lake town, family trips, and easy sightseeing.
+                </p>
+              </div>
+              <div style="text-align: right">
+                <div
+                  id="districtBudget"
+                  style="font-weight: 800; font-size: 1.15rem"
+                >
+                  ₹₹
+                </div>
+                <div
+                  id="districtSeason"
+                  style="color: var(--muted); font-size: 0.9rem"
+                >
+                  Best: Mar–Jun
+                </div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="meta-card">
+                <b>Trip length</b><small id="districtDays">2–3 days</small>
+              </div>
+              <div class="meta-card">
+                <b>Region</b><small id="districtRegion">Kumaon</small>
+              </div>
+            </div>
+
+            <h3 style="margin: 18px 0 10px">Top places</h3>
+            <div class="places" id="placesList">
+              <div class="place">
+                <div class="img">
+                  <img src="naini lake.png"  alt="Naini Lake" />
+                </div>
+                <b>Lakefront core</b>
+              </div>
+
+              <div class="place">
+                <div class="img">
+                  <img src="snow view.png"  alt="Snow View" />
+                </div>
+                <b>Viewpoint</b>
+              </div>
+
+              <div class="place">
+                <div class="img">
+                  <img src="bhimtal.png"  alt="Bhimtal" />
+                </div>
+                <b>Nearby lake</b>
+              </div>
+
+              <div class="place">
+                <div class="img">
+                  <img src="mall road.png"  alt="Mall Road" />
+                </div>
+                <b>Walk + shopping</b>
+              </div>
+            </div>
+
+            <h3 style="margin: 18px 0 10px">Auto itinerary</h3>
+            <div class="itinerary" id="itineraryList">
+              <div class="day">
+                <div class="day-head">
+                  <strong>Day 1</strong><span>Arrival + lake</span>
+                </div>
+                <ul class="clean">
+                  <li>Check-in</li>
+                  <li>Naini Lake</li>
+                  <li>Evening market walk</li>
+                </ul>
+              </div>
+              <div class="day">
+                <div class="day-head">
+                  <strong>Day 2</strong><span>Main sightseeing</span>
+                </div>
+                <ul class="clean">
+                  <li>Snow View</li>
+                  <li>Nearby attractions</li>
+                  <li>Sunset point</li>
+                </ul>
+              </div>
+              <div class="day">
+                <div class="day-head">
+                  <strong>Day 3</strong><span>Nearby + return</span>
+                </div>
+                <ul class="clean">
+                  <li>Bhimtal</li>
+                  <li>Lunch stop</li>
+                  <li>Departure</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="trip-box">
+              <strong>Trip wizard output</strong>
+              <div class="row">
+                <div>
+                  <b>Interest</b><br /><small id="tripInterest">Family</small>
+                </div>
+                <div>
+                  <b>Budget</b><br /><small id="tripBudget">Medium</small>
+                </div>
+                <div>
+                  <b>Suggested route</b><br /><small id="tripRoute"
+                    >Nainital → Bhimtal → Sattal</small
+                  >
+                </div>
+              </div>
+              <div class="btn-row">
+                <select id="interest">
+                  <option value="family">Family</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="pilgrimage">Pilgrimage</option>
+                  <option value="wildlife">Wildlife</option>
+                </select>
+
+                <button id="generatePlan" class="btn btn-primary">
+                  Generate Plan
+                </button>
+                <button id="copySummary" class="btn btn-secondary">
+                  Copy Summary
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section journey-section">
+        <h2>Your Uttarakhand Journey</h2>
+
+        <p class="sub">
+          Every memorable trip begins with a plan and ends with unforgettable
+          memories.
+        </p>
+
+        <div class="journey">
+          <div class="step">
+            <div class="circle">🗺️</div>
+            <h3>Plan</h3>
+            <p>Select your district and travel preferences.</p>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="circle">🏔️</div>
+            <h3>Explore</h3>
+            <p>Visit famous attractions and hidden gems.</p>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="circle">🌿</div>
+            <h3>Experience</h3>
+            <p>Enjoy local culture, food and adventures.</p>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="circle">📸</div>
+            <h3>Remember</h3>
+            <p>Create memories you'll cherish forever.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Featured destinations</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-photo photo-kedarnath"></div>
+            <strong>Kedarnath</strong
+            ><span>Spiritual, high-altitude, pilgrimage-focused.</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-photo photo-auli"></div>
+            <strong>Auli</strong><span>Snow, skiing, and mountain views.</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-photo photo-rishikesh"></div>
+            <strong>Rishikesh</strong
+            ><span>Adventure, yoga, and river experiences.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Wildlife and nature gallery</h2>
+
+        <div class="gallery-row">
+          <div class="gallery-card">
+            <div class="gallery-img g1"></div>
+            <div class="cap">
+              <b>Tiger</b><small>Jim Corbett style wildlife photography</small>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-img g2"></div>
+            <div class="cap">
+              <b>Elephant</b><small>Forest safari and habitat shots</small>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-img g3"></div>
+            <div class="cap">
+              <b>Deer</b><small>Soft nature and wildlife visuals</small>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-img g4"></div>
+            <div class="cap">
+              <b>Birds</b
+              ><small>Birdwatching and Himalayan nature imagery</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Homepage modules</h2>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <strong>District score</strong>
+            <p>Family, adventure, spiritual, budget, crowd level.</p>
+          </div>
+          <div class="mini-card">
+            <strong>Weather</strong>
+            <p>Current weather and best season for each district.</p>
+          </div>
+          <div class="mini-card">
+            <strong>Nearby places</strong>
+            <p>Useful radius-based suggestions, not random lists.</p>
+          </div>
+          <div class="mini-card">
+            <strong>Emergency info</strong>
+            <p>Helpline, hospital, and transport shortcuts.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Uttarakhand Tourism</h3>
+
+          <p>
+            Explore the beauty of Devbhoomi with our travel planner and
+            destination guide.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+          <a href="destination.html">Destinations</a>
+          <a href="travel-guide.html">Travel Guide</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div>
+          <h3>Popular Places</h3>
+
+          <p>Kedarnath</p>
+          <p>Auli</p>
+          <p>Nainital</p>
+          <p>Rishikesh</p>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <p>📍 Uttarakhand, India</p>
+          <p>✉ info@uttarakhandtourism.com</p>
+          <p>☎ +91 8979712088</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Uttarakhand Tourism | Made  by Piyush Rawat
+      </div>
+    </footer>
+    <script src="district.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

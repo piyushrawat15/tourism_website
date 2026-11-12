@@ -1,0 +1,335 @@
+/*========== ABOUT HERO ==========*/
+.about-hero {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: #fff;
+  border-radius: 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+.about-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #0f5fa8;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.about-left h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #13233d;
+}
+.about-left p {
+  font-size: 20px;
+  color: #5f6b7a;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+.about-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.about-main img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-side img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+/*========== FACTS ==========*/
+.facts,
+.why,
+.regions,
+.culture,
+.double-section,
+.about-cta {
+  max-width: 1400px;
+  margin: 90px auto;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.fact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.fact-card:hover {
+  transform: translateY(-8px);
+}
+.fact-card h3 {
+  color: #0f5fa8;
+  margin-bottom: 12px;
+}
+
+/*========== WHY VISIT ==========*/
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.why-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.why-card:hover {
+  transform: translateY(-8px);
+}
+.why-card span {
+  font-size: 45px;
+}
+.why-card h3 {
+  margin: 18px 0;
+  color: #12355b;
+}
+.why-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/*========== REGIONS ==========*/
+.regions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.region {
+  background: #fff;
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+.region h2 {
+  margin-bottom: 25px;
+  color: #12355b;
+}
+.region ul {
+  padding-left: 20px;
+}
+.region li {
+  margin: 12px 0;
+}
+
+/*========== CULTURE ==========*/
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.culture-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.culture-card:hover {
+  transform: translateY(-8px);
+}
+.culture-card h3 {
+  margin: 18px 0;
+  color: #12355b;
+}
+
+/*========== WILDLIFE & FOOD ==========*/
+.double-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+.box h2 {
+  margin-bottom: 25px;
+  color: #12355b;
+}
+.box ul {
+  padding-left: 20px;
+}
+.box li {
+  margin: 15px 0;
+}
+
+/*========== CTA ==========*/
+.about-cta {
+  background: linear-gradient(135deg, #0f5fa8, #2f8de4);
+  color: #fff;
+  text-align: center;
+  padding: 70px 40px;
+  border-radius: 35px;
+}
+.about-cta h2 {
+  font-size: 46px;
+  margin-bottom: 18px;
+}
+.about-cta p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+/*========== RESPONSIVE ==========*/
+@media (max-width: 1000px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  .about-right {
+    grid-template-columns: 1fr;
+  }
+  .about-main img {
+    height: 420px;
+  }
+  .about-side img {
+    height: 220px;
+  }
+  .regions,
+  .double-section {
+    grid-template-columns: 1fr;
+  }
+  .about-left h1 {
+    font-size: 46px;
+  }
+}
+.did-you-know {
+  max-width: 1400px;
+  margin: 90px auto;
+}
+
+.facts-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.strip-card {
+  background: #fff;
+  padding: 35px;
+  text-align: center;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.strip-card:hover {
+  transform: translateY(-8px);
+}
+
+.strip-card h3 {
+  font-size: 42px;
+  color: #0f5fa8;
+  margin-bottom: 10px;
+}
+
+.strip-card p {
+  color: #666;
+}
+
+/*========== FOOTER ==========*/
+
+.footer {
+  background: #13233d;
+  color: #fff;
+  margin-top: 100px;
+  padding: 70px 8% 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer p {
+  color: #c8d2df;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  display: block;
+  color: #c8d2df;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #4ea8ff;
+  padding-left: 6px;
+}
+
+.copyright {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  color: #b8c5d3;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 25px 20px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+
+  .footer h3 {
+    font-size: 20px;
+  }
+}
